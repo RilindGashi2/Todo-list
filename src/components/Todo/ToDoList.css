@@ -1,0 +1,126 @@
+
+.todo-container {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    width: 330px;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.header input {
+    width: 60%;
+    padding: 8px;
+    border: none;
+    outline: none;
+}
+
+.header button {
+    display: flex;
+    align-items: center;
+    padding: 7px 7px;
+    background-color: rgb(5, 5, 208);
+    border-radius: 25px;
+    border: none;
+}
+
+.btn-add {
+    color: white;
+    cursor: pointer;
+}
+
+.task-types {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.task-types div {
+    flex: 1 1 30%;
+    margin: 1px;
+    align-items: center;
+    align-self: center;
+}
+
+.blue-bg {
+    background-color: rgb(91, 91, 228);
+    border-radius: 5px;
+    font-size: 10px;
+    padding: 3px;
+}
+
+.red-bg {
+    background-color: rgb(223, 133, 133);
+    border-radius: 5px;
+    font-size: 10px;
+    padding: 3px;
+}
+
+.green-bg {
+    background-color: rgb(85, 173, 85);
+    border-radius: 5px;
+    font-size: 10px;
+    padding: 3px;
+}
+
+.tasks {
+    display: flex;
+    flex-direction: column;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+    text-align: left;
+}
+
+.footer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.delete-btn,
+.edit-btn {
+    padding: 10px 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: auto;
+    border-radius: 5px;
+}
+
+.delete-btn {
+    background-color: #FF4136;
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #E71D36;
+}
+
+.edit-btn {
+    background-color: #0074D9;
+    color: white;
+}
+
+.edit-btn:hover {
+    background-color: #005BB5;
+}
+
+@media (max-width: 600px) {
+    .header input {
+        width: 50%;
+    }
+
+    .task-types div {
+        flex: 1 1 100%;
+    }
+}
