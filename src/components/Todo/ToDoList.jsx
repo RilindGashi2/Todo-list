@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './ToDoList.css';
 import { BsPlusCircle } from 'react-icons/bs';
+import axios from 'axios';
 
 const ToDoList = () => {
   const [tasks, setTasks] = useState([
@@ -18,15 +19,20 @@ const ToDoList = () => {
 
   const handleAddTask = () => {
     if (newTaskText.trim() !== '') {
-      const newTask = {
-        id: tasks.length + 1,
-        text: newTaskText,
-        completed: false
-      };
-      setTasks([...tasks, newTask]);
-      setNewTaskText('');
+        axios.post('http://localhost:8082/crud', { text: newTaskText })
+            .then(response => {
+                const newTask = {
+                    id: response.data.id,
+                    text: newTaskText,
+                    completed: false
+                };
+                setTasks(prevTasks => [...prevTasks, newTask]);
+                setNewTaskText('');
+            })
+            .catch(error => console.error('Error adding task:', error));
     }
-  };
+};
+
 
   const handleToggleComplete = (id) => {
     setTasks((prevTasks) =>
