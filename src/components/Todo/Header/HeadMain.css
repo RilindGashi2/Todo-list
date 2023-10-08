@@ -1,0 +1,53 @@
+.head-container {
+  
+  color: white;
+  padding: 20px; /* Adjust padding */
+  display: flex;
+  justify-content: space-between; /* Align content to the ends */
+  align-items: center;
+}
+
+.nav-links {
+  list-style-type: none;
+  padding: 10px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.nav-links li {
+  margin: 0 30px; /* Adjust spacing between items */
+}
+
+.nav-links li button {
+  color: white;
+  background-color: #3498db; /* Blue color for buttons */
+  border: none;
+  border-radius: 8px;
+  padding: 10px 30px; /* Adjust padding and increase width */
+  cursor: pointer;
+  font-size: 1em;
+  outline: none;
+  margin-right: 10px; /* Add margin to create space between buttons */
+}
+
+.nav-links li button:hover {
+  background-color: #2980b9; /* Darker blue on hover */
+}
+
+.nav-links li button.bn20 {
+  border-bottom: 4px solid #2ecc71; /* Border color for specific button */
+}
+
+/* Apply styles when the button is clicked */
+.nav-links li button:active {
+  transform: translateY(-3px);
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+  .nav-links li {
+    margin: 0 5px; /* Adjust spacing for smaller screens */
+  }
+}

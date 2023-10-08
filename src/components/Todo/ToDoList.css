@@ -1,4 +1,4 @@
-.todo-container {
+ .todo-container {
     background-color: #fff;
     padding: 20px;
     border: 1px solid #ccc;
@@ -122,4 +122,4 @@
     .task-types div {
         flex: 1 1 100%;
     }
-}
+} 
